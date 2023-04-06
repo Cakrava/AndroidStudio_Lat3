@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Latihan3</string>
+    <string-array name="nama_prodi">
+        <item>Sistem Informasi</item>
+        <item>Sistem Komputer</item>
+        <item>Manajemen Informatika</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Masukkan Data Diri"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="#4CAF50"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp" />
+
+    <!--    nama-->
+    <EditText
+        android:id="@+id/edi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv1"
+        android:layout_centerHorizontal="true"
+        android:ems="15"
+        android:hint="Masukan nama"
+        android:inputType="textCapSentences"
+        android:textAlignment="center" />
+
+    <!--   email-->
+    <EditText
+        android:id="@+id/ed2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edi"
+        android:layout_centerHorizontal="true"
+        android:ems="15"
+        android:hint="Masukan Email"
+        android:inputType="textEmailAddress"
+        android:textAlignment="center" />
+<!--password-->
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="15"
+        android:hint="Masukan Password"
+        android:textAlignment="center"
+        android:textSize="18dp"
+        android:layout_below="@+id/ed2"
+        android:id="@+id/ed3"
+        android:layout_centerHorizontal="true"
+        android:inputType="textPassword"/>
+
+    jenis kelamin -->
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jenis Kelamin"
+        android:id="@+id/tvjk"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/ed3"/>
+
+<!--    radio button-->
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rg"
+        android:layout_below="@id/tvjk"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+        <RadioButton
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rb1"
+            android:text="Laki-laki"/>
+
+        <RadioButton
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rb2"
+            android:text="Perempuan"/>
+
+    </RadioGroup>
+
+<!--    usia-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Usia"
+        android:textSize="15dp"
+        android:layout_below="@id/rg"
+        android:id="@+id/tvusia"
+        android:layout_centerHorizontal="true"/>
+    <SeekBar
+        android:id="@+id/sek"
+        android:layout_width="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvusia"/>
+
+<!--usia angka-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10 tahun"
+        android:layout_below="@id/sek"
+        android:id="@+id/tvsb"
+        android:layout_centerHorizontal="true"
+        android:textSize="15dp"
+        />
+    <!--    program studi-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Program Studi"
+    android:textSize="15dp"
+    android:layout_below="@id/tvsb"
+    android:id="@+id/tvps"
+    android:layout_centerHorizontal="true"
+    />
+
+    <Spinner
+
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tvps"
+        android:layout_marginTop="10dp"
+            android:entries="@array/nama_prodi"
+    android:textAlignment="center"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pilihan Kelas"
+        android:layout_marginTop="15dp"
+        android:id="@+id/pilihkelas"
+        android:layout_below="@id/sp"
+        android:textAlignment="center"
+        android:layout_marginLeft="10dp"
+        android:layout_centerHorizontal="true"/>
+
+    <ToggleButton
+        android:layout_height="40dp"
+        android:id="@+id/tgbt"
+    android:textOn="Pagi"
+    android:textOff="Sore"
+    android:layout_width="wrap_content"
+        android:layout_toRightOf="@id/pilihkelas"
+        android:layout_marginTop="10dp"
+    android:layout_below="@+id/sp"
+    android:checked="true"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kirim Data (inten)"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/btnkirim"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/tgbt"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kirim Data (bundle)"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/btnbundel"
+        android:textColor="#FF0000"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/btnkirim"
+        />
+</RelativeLayout>
